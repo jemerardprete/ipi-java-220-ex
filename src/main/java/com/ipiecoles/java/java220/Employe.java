@@ -53,5 +53,14 @@ public class Employe {
         this.salaire = salaire;
     }
 
-    // 102 103 105
+    // 102
+    // Définir constructeur par défaut
+    // Définir un constructeur avec l'ensemble des arguments précédemment créés
+    // Décommenter la ligne 122 de EntrepriseTest
+
+    // 103
+    // Déclarer méthode getNombreAnneeAnciennete calculant le nombre d'année d'ancienneté d'un employé
+
+    // 105
+    // Développer méthode getNbConges retournant la constante de classe NB_CONGES_BASE de la classe Entreprise
 }
