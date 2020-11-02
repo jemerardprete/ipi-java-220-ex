@@ -7,7 +7,10 @@ import java.util.Objects;
 /**
  * Created by pjvilloud on 21/09/17.
  */
-public class Employe {
+
+// 401 : Rendre la classe `Employe` abstraite
+
+public abstract class Employe {
     // 101 : Ajout de champs avec getters/setters
     private String nom;
     private String prenom;
@@ -48,9 +51,8 @@ public class Employe {
     }
 
     // 110 : Déclarer dans la classe `Employe` une méthode `getPrimeAnnuelle` retournant la prime annuelle de base définie dans la classe `Entreprise`
-    public Double getPrimeAnnuelle(){
-        return Entreprise.primeAnnuelleBase();
-    }
+    // 402 : Rendre la méthode `getPrimeAnnuelle` d'`Employe` abstraite.
+    public abstract Double getPrimeAnnuelle(); // si non abstraite, on affiche ceci : {return Entreprise.primeAnnuelleBase();}
 
     public String getNom() {
         return nom;
