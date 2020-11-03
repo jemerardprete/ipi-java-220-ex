@@ -2,6 +2,8 @@ package com.ipiecoles.java.java220;
 
 import org.joda.time.LocalDate;
 
+import java.util.Objects;
+
 // 301 : Comme pour la classe `Commercial`, créer la classe `Technicien` et la faire hériter d'`Employe`
 public class Technicien extends Employe {
 
@@ -62,5 +64,26 @@ public class Technicien extends Employe {
         return primeAnnuelleBase + Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete();
 
         // Version courte : return super.getPrimeAnnuelle() * (1 + (grade / 10d)) + Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Technicien that = (Technicien) o;
+        return Objects.equals(grade, that.grade);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), grade);
+    }
+
+    @Override
+    public String toString() {
+        return "Technicien{" +
+                "grade=" + grade +
+                '}';
     }
 }
